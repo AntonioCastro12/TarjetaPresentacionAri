@@ -24,7 +24,7 @@ const profile = {
     "https://wa.me/524623609461?text=Hola%20Ari,%20me%20gustaría%20agendar%20una%20cita",
   instagram: "https://www.instagram.com/ari.cazares.nutriologa",
   instagramLabel: "@ari.cazares.nutriologa",
-  facebook: "https://www.facebook.com/search/top?q=Ciudad%20Renal%20con%20Nutrióloga%20Ari",
+  facebook: "https://www.facebook.com/share/1J9Htjtug9/",
   facebookLabel: "Ciudad Renal con Nutrióloga Ari",
   maps: "https://www.google.com/maps/search/?api=1&query=Consultorio%20de%20Nutrición%20León%20Gto",
   location: "Consultorio de Nutrición León, Gto.",
@@ -74,13 +74,13 @@ const contactButtons = [
     variant: "secondary",
     external: true,
   },
-  // {
-  //   label: "Facebook",
-  //   href: profile.facebook,
-  //   icon: Facebook,
-  //   variant: "secondary",
-  //   external: true,
-  // },
+  {
+    label: "Facebook",
+    href: profile.facebook,
+    icon: Facebook,
+    variant: "secondary",
+    external: true,
+  },
   {
     label: "Ubicación en Google Maps",
     href: profile.maps,
@@ -193,10 +193,10 @@ function ContactButtons() {
           <Instagram size={17} />
           <span>{profile.instagramLabel}</span>
         </p>
-        {/* <p>
+        <p>
           <Facebook size={17} />
           <span>{profile.facebookLabel}</span>
-        </p> */}
+        </p> 
         <p>
           <MapPin size={17} />
           <span>{profile.location}</span>
