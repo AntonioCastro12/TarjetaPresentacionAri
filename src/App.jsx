@@ -13,7 +13,6 @@ const profile = {
   firstName: "Ari Cázares",
   lastName: "Zamora",
   specialty: "Nutrióloga Renal",
-  subtitle: "Especialista en nutrición clínica y renal",
   phone: "462 360 9461",
   phoneHref: "+524623609461",
   instagram: "@ari.cazares.nutriologa",
@@ -49,37 +48,11 @@ function App() {
   return (
     <main className="page-shell">
       <article className="digital-card" aria-label="Tarjeta digital de Ari Cázares Zamora">
-        <section className="identity" aria-label="Identidad visual">
-          <h1>{profile.firstName}</h1>
-          <div className="zamora-word">
-            <span>Zam</span>
-            <span className="logo-letter">
-              <KidneyMark />  
-            </span>
-            <span>ra</span>
-          </div>
-          <div className="specialty-row">
-            <span />
-            <p>{profile.specialty}</p>
-            <span />
-          </div>
-          <p className="subtitle">{profile.subtitle}</p>
-        </section>
-
-        <section className="portrait-section" aria-label="Fotografía profesional">
-          <div className="portrait-backdrop" />
-          <div className="portrait-frame">
-            <Leaf className="leaf top-leaf" size={44} />
-            <img
-              className="portrait-photo"
-              src="/assets/ari-foto-blanca.png"
-              alt={profile.firstName}
-            />
-          </div>
-          <Leaf className="leaf side-leaf" size={34} />
-          <div className="logo-badge" aria-label="Logo renal">
-            <KidneyMark />
-          </div>
+        <section className="top-exact" aria-label="Identidad visual">
+          <img
+            src="/assets/ari-top-exacto-card.png"
+            alt={`${profile.firstName} ${profile.lastName}, ${profile.specialty}`}
+          />
         </section>
 
         <section className="services" aria-label="Servicios">

@@ -6,7 +6,7 @@
   --teal-dark: #238d88;
   --ink: #11152a;
   --soft-blue: #c9ddef;
-  --paper: #fffefb;
+  --paper: #f7f9f8;
   --line: #55b7b0;
 }
 
@@ -37,9 +37,9 @@ a {
 
 .digital-card {
   width: calc(100vw - 28px);
-  max-width: 420px;
+  max-width: 334px;
   min-height: 820px;
-  padding: 24px clamp(18px, 5vw, 30px) 24px;
+  padding: 0 18px 22px;
   position: relative;
   overflow: hidden;
   border-radius: 28px;
@@ -49,7 +49,7 @@ a {
 
 .digital-card::before,
 .digital-card::after {
-  content: "";
+  content: none;
   position: absolute;
   z-index: 0;
   border-radius: 999px;
@@ -74,6 +74,17 @@ a {
 .digital-card > * {
   position: relative;
   z-index: 1;
+}
+
+.top-exact {
+  width: calc(100% + 36px);
+  margin: 0 -18px 0;
+}
+
+.top-exact img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .identity {
@@ -292,8 +303,10 @@ a {
 }
 
 .services {
-  width: min(100%, 330px);
-  margin: 0 auto;
+  width: min(100%, 298px);
+  margin: -1px auto 0;
+  padding-top: 8px;
+  background: var(--paper);
 }
 
 .services h2,
@@ -357,7 +370,7 @@ a {
   padding: 10px 12px;
   border: 2px solid rgba(47, 176, 168, 0.68);
   border-radius: 15px;
-  background: rgba(247, 255, 252, 0.9);
+  background: rgba(250, 250, 250, 0.96);
 }
 
 .qr-copy {
@@ -384,7 +397,7 @@ a {
 }
 
 .contact {
-  width: min(100%, 330px);
+  width: min(100%, 298px);
   display: grid;
   gap: 8px;
   margin: 15px auto 18px;
@@ -416,7 +429,7 @@ a {
   padding: 8px 10px;
   border: 2px solid rgba(47, 176, 168, 0.72);
   border-radius: 14px;
-  background: rgba(247, 255, 252, 0.88);
+  background: rgba(250, 250, 250, 0.96);
 }
 
 .footer-logo {
