@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&family=Inter:wght@500;600;700;800&display=swap");
+
+:root {
+  --navy: #071653;
+  --teal: #2fb0a8;
+  --teal-dark: #238d88;
+  --ink: #11152a;
+  --soft-blue: #c9ddef;
+  --paper: #fffefb;
+  --line: #55b7b0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--ink);
+  background: linear-gradient(135deg, #e3e8ea 0%, #f4f4f1 100%);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 14px;
+}
+
+.digital-card {
+  width: calc(100vw - 28px);
+  max-width: 420px;
+  min-height: 820px;
+  padding: 24px clamp(18px, 5vw, 30px) 24px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--paper);
+  box-shadow: 0 26px 42px rgba(19, 33, 43, 0.28);
+}
+
+.digital-card::before,
+.digital-card::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 999px;
+  background: rgba(201, 221, 239, 0.95);
+  pointer-events: none;
+}
+
+.digital-card::before {
+  width: 178px;
+  height: 178px;
+  left: 52px;
+  top: 315px;
+}
+
+.digital-card::after {
+  width: 168px;
+  height: 168px;
+  right: 34px;
+  top: 322px;
+}
+
+.digital-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.identity {
+  text-align: center;
+}
+
+.identity h1 {
+  margin: 0;
+  color: var(--navy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.78rem, 10.8vw, 3.18rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.zamora-word {
+  width: fit-content;
+  margin: 2px auto 0;
+  display: flex;
+  align-items: center;
+  color: var(--teal);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.72rem, 10.4vw, 3.12rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: 0;
+}
+
+.logo-letter {
+  width: 0.78em;
+  height: 0.86em;
+  display: inline-grid;
+  place-items: center;
+  margin: 0 -0.02em;
+  border: 1.5px solid rgba(47, 176, 168, 0.5);
+  border-radius: 50%;
+  transform: translateY(0.03em);
+}
+
+.logo-letter .kidney-mark {
+  transform: scale(0.5);
+}
+
+.specialty-row {
+  width: min(100%, 290px);
+  margin: 7px auto 7px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.specialty-row span {
+  height: 2px;
+  position: relative;
+  background: var(--line);
+}
+
+.specialty-row span::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  background: var(--line);
+  transform: translateY(-50%);
+}
+
+.specialty-row span:first-child::after {
+  right: -8px;
+}
+
+.specialty-row span:last-child::after {
+  left: -8px;
+}
+
+.specialty-row p {
+  margin: 0;
+  color: var(--navy);
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.58rem, 6.4vw, 1.95rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.subtitle {
+  max-width: 340px;
+  margin: 0 auto;
+  color: var(--ink);
+  font-size: clamp(0.92rem, 3.9vw, 1.08rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.portrait-section {
+  width: min(100%, 300px);
+  height: 274px;
+  margin: 16px auto 12px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.portrait-backdrop {
+  width: 260px;
+  height: 150px;
+  position: absolute;
+  bottom: 42px;
+  border-radius: 999px;
+  background: var(--soft-blue);
+}
+
+.portrait-frame {
+  width: 204px;
+  height: 248px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--teal);
+  border-bottom-width: 0;
+  border-radius: 118px 118px 22px 22px;
+  background: #fff;
+}
+
+.portrait-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 52% 24%;
+  transform: scale(1.01);
+}
+
+.leaf {
+  color: var(--teal);
+  fill: rgba(47, 176, 168, 0.22);
+}
+
+.top-leaf {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  z-index: 2;
+  transform: rotate(-18deg);
+}
+
+.side-leaf {
+  position: absolute;
+  left: 42px;
+  bottom: 101px;
+  z-index: 3;
+  transform: rotate(22deg);
+}
+
+.logo-badge {
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  left: 34px;
+  bottom: 16px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--teal);
+  border-radius: 50%;
+  background: #fbfffd;
+  box-shadow: 0 7px 16px rgba(7, 22, 83, 0.12);
+  z-index: 4;
+}
+
+.kidney-mark {
+  width: 72px;
+  height: 66px;
+  position: relative;
+}
+
+.kidney {
+  width: 27px;
+  height: 45px;
+  position: absolute;
+  top: 14px;
+  border-radius: 50% 38% 45% 50%;
+  background: var(--teal);
+}
+
+.kidney-left {
+  left: 5px;
+  transform: rotate(18deg);
+}
+
+.kidney-right {
+  right: 5px;
+  transform: scaleX(-1) rotate(18deg);
+  background: var(--navy);
+}
+
+.stem {
+  width: 3px;
+  height: 46px;
+  position: absolute;
+  bottom: 3px;
+  background: currentColor;
+}
+
+.stem-left {
+  left: 34px;
+  color: var(--teal);
+  transform: rotate(-8deg);
+}
+
+.stem-right {
+  right: 34px;
+  color: var(--navy);
+  transform: rotate(8deg);
+}
+
+.services {
+  width: min(100%, 330px);
+  margin: 0 auto;
+}
+
+.services h2,
+.cta {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 7px 20px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--teal);
+  font-size: clamp(1.05rem, 4.6vw, 1.22rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.services ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 15px 0 18px;
+  padding: 0;
+}
+
+.services li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: start;
+  gap: 8px;
+  font-size: clamp(0.96rem, 4.4vw, 1.12rem);
+  font-weight: 700;
+  line-height: 1.16;
+}
+
+.services svg {
+  color: var(--teal-dark);
+}
+
+.appointment {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 14px rgba(35, 141, 136, 0.18);
+}
+
+.qr-card {
+  width: min(100%, 322px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 2px solid rgba(47, 176, 168, 0.68);
+  border-radius: 15px;
+  background: rgba(247, 255, 252, 0.9);
+}
+
+.qr-copy {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 7px;
+  color: var(--navy);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.qr-copy svg {
+  color: var(--navy);
+}
+
+.qr-card > svg:last-child {
+  width: 104px;
+  height: 104px;
+  border-radius: 10px;
+  box-shadow: 0 7px 13px rgba(7, 22, 83, 0.1);
+}
+
+.contact {
+  width: min(100%, 330px);
+  display: grid;
+  gap: 8px;
+  margin: 15px auto 18px;
+}
+
+.contact a,
+.contact p {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 29px 1fr;
+  align-items: center;
+  margin: 0;
+  font-size: clamp(0.95rem, 4vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.contact svg {
+  color: var(--navy);
+  fill: var(--navy);
+}
+
+.quote {
+  min-height: 72px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 27px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 2px solid rgba(47, 176, 168, 0.72);
+  border-radius: 14px;
+  background: rgba(247, 255, 252, 0.88);
+}
+
+.footer-logo {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+  background: #fafffd;
+}
+
+.footer-logo .kidney-mark {
+  transform: scale(0.54);
+}
+
+.quote .kidney-mark {
+  width: 49px;
+  height: 49px;
+}
+
+.quote .kidney {
+  width: 18px;
+  height: 30px;
+  top: 12px;
+}
+
+.quote .stem {
+  height: 33px;
+}
+
+.quote p {
+  min-width: 0;
+  margin: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.quote strong {
+  color: var(--ink);
+  font-size: clamp(0.82rem, 3.5vw, 0.98rem);
+  line-height: 1.15;
+}
+
+.quote em {
+  color: var(--teal-dark);
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.15rem, 5vw, 1.42rem);
+  line-height: 1.02;
+}
+
+.quote > svg {
+  color: var(--teal);
+  fill: rgba(47, 176, 168, 0.2);
+}
+
+@media (max-width: 390px) {
+  .digital-card {
+    padding-inline: 18px;
+    border-radius: 26px;
+  }
+
+  .identity h1 {
+    font-size: 2.8rem;
+  }
+
+  .zamora-word {
+    font-size: 2.72rem;
+  }
+
+  .subtitle {
+    max-width: 282px;
+    font-size: 0.9rem;
+  }
+
+  .portrait-section {
+    width: 282px;
+    height: 264px;
+  }
+
+  .portrait-frame {
+    width: 194px;
+    height: 236px;
+  }
+
+  .portrait-backdrop {
+    width: 238px;
+    height: 145px;
+  }
+
+  .logo-badge {
+    left: 26px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-badge .kidney-mark {
+    transform: scale(0.9);
+  }
+
+  .qr-card {
+    width: min(100%, 294px);
+    gap: 8px;
+    padding: 9px 10px;
+  }
+
+  .qr-copy {
+    font-size: 0.68rem;
+  }
+
+  .qr-card > svg:last-child {
+    width: 94px;
+    height: 94px;
+  }
+
+  .quote {
+    grid-template-columns: 42px minmax(0, 1fr) 20px;
+  }
+
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .quote strong {
+    font-size: 0.78rem;
+  }
+
+  .quote em {
+    font-size: 1.25rem;
+  }
+}
