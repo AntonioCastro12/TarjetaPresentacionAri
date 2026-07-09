@@ -21,7 +21,7 @@ const profile = {
   phone: "462 360 9461",
   phoneHref: "tel:4623609461",
   whatsapp:
-    "https://wa.me/524623609461?text=Hola%20Ari,%20me%20gustaría%20agendar%20una%20cita",
+    "https://wa.me/524623609461?text=Hola%20Ari%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita.%0A%0AMe%20interesa%20recibir%20orientaci%C3%B3n%20nutricional%20especializada%20para%20el%20cuidado%20de%20mi%20salud.%0A%0AVi%20que%20atienden%20casos%20de%3A%0A%E2%80%A2%20Obesidad%0A%E2%80%A2%20Diabetes%20mellitus%0A%E2%80%A2%20Hipertensi%C3%B3n%20arterial%0A%E2%80%A2%20Enfermedad%20renal%20en%20distintas%20etapas.%0A%0A%C2%BFMe%20podr%C3%ADan%20compartir%20informaci%C3%B3n%20sobre%20disponibilidad%2C%20costos%20y%20requisitos%20para%20agendar%3F",
   instagram: "https://www.instagram.com/ari.cazares.nutriologa",
   instagramLabel: "@ari.cazares.nutriologa",
   facebook: "https://www.facebook.com/share/1J9Htjtug9/",
