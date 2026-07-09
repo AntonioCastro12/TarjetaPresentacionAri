@@ -100,7 +100,7 @@ const contactButtons = [
 function Header() {
   return (
     <header className="header">
-      <img src="/assets/logo-ari.png" alt="Logo de Ari Cázares Zamora" />
+      <img src="/assets/Logo_Ari.jpeg" alt="Logo de Ari Cázares Zamora" />
     </header>
   );
 }
@@ -115,7 +115,7 @@ function Hero() {
 
       <div className="portrait-shell">
         <div className="portrait-ring">
-          <img src="/assets/ari-foto.png" alt={profile.name} />
+          <img src="/assets/AriZamora-foto.jpeg" alt={profile.name} />
         </div>
         <div className="pulse-badge" aria-hidden="true">
           <HeartPulse size={27} />
@@ -239,7 +239,7 @@ function Footer() {
         “Tu salud no es una meta, es un estilo de vida. Pequeños cambios, grandes resultados.”
       </blockquote>
       <div className="signature">
-        <img src="/assets/logo_cortado.png" alt="" aria-hidden="true" />
+        <img src="/assets/Logo_footer.jpeg" alt="" aria-hidden="true" />
       </div>
       <p className="credit">Tarjeta digital desarrollada por RCM CodeDev</p>
     </footer>
@@ -265,7 +265,7 @@ function SplashIntro() {
     <section className="splash-intro" aria-label="Bienvenida de Ari Cázares Zamora">
       <div className="splash-orbit" aria-hidden="true" />
       <div className="splash-card">
-        <img src="/assets/intro-logo.png" alt="Ari Cázares Zamora, Nutrióloga Renal" />
+        <img src="/assets/Logo_Ari.jpeg" alt="Ari Cázares Zamora, Nutrióloga Renal" />
         <div className="splash-line" aria-hidden="true" />
       </div>
     </section>
