@@ -26,8 +26,8 @@ const profile = {
   instagramLabel: "@ari.cazares.nutriologa",
   facebook: "https://www.facebook.com/share/1J9Htjtug9/",
   facebookLabel: "Ciudad Renal con Nutrióloga Ari",
-  maps: "https://www.google.com/maps/search/?api=1&query=Consultorio%20de%20Nutrición%20León%20Gto",
-  location: "Consultorio de Nutrición León, Gto.",
+  maps: "https://maps.app.goo.gl/KbmbfJbpUcWNTa3F7",
+  location: "Acacias 1790 int 9 Fraccionamiento Gamez, Irapuato Gto",
 };
 
 const services = [
